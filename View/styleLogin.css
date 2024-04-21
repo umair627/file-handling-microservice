@@ -1,0 +1,121 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff; /* White container background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.tabs {
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+}
+
+.tablink {
+    background-color: #333; /* Dark gray button background */
+    color: #fff; /* White text color */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    float: left;
+    transition: background-color 0.3s;
+    border-radius: 5px; /* Rounded corners */
+    margin-right: 5px;
+}
+
+.tablink:hover {
+    background-color: #555; /* Slightly lighter shade of gray on hover */
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border-top: none;
+}
+
+h2 {
+    text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="file"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff; /* Default blue button background */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+#message {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#file-list {
+    margin-top: 20px;
+}
+
+#file-list h3 {
+    margin-bottom: 10px;
+}
+
+#file-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#file-list li {
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 5px; /* Rounded corners */
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+/* Hide file upload and file list by default */
+#upload,
+#files {
+    display: none;
+}
+
+
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: auto; /* Center loader */
+    margin-top: 50px;
+    display: none; /* Hide loader by default */
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

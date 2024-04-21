@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link href="./css/app.min.css" rel="stylesheet" />
+  <title>Work</title>
+
+  <style>
+    .loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: auto; /* Center loader */
+    margin-top: 50px;
+    display: none; /* Hide loader by default */
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .btn-bd-primary {
+      --bd-violet-bg: #712cf9;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #6528e0;
+      --bs-btn-hover-border-color: #6528e0;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #5a23c8;
+      --bs-btn-active-border-color: #5a23c8;
+    }
+
+    .bd-mode-toggle {
+      z-index: 1500;
+    }
+
+    .bd-mode-toggle .dropdown-menu .active .bi {
+      display: block !important;
+    }
+    .file_icon {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.file_box {
+    /* Add CSS styles to ensure file name is displayed properly */
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    /* Add CSS styles to handle long file names */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+}
+.file-list {
+  display: flex; /* Set the container to use Flexbox */
+  flex-wrap: wrap; /* Allow wrapping to multiple lines */
+  justify-content: space-around; /* Distribute icons evenly */
+}
+
+.file-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer; /* Change cursor to pointer to indicate clickable */
+    width: 150px; /* Increase the width of the container */
+    padding: 10px; /* Add padding for spacing */
+}
+
+.file-icon img {
+    width: 80px; /* Adjust the width of the file icon image */
+    height: auto;
+}
+
+.file-icon .title {
+    margin-top: 5px;
+    font-size: 14px; /* Adjust font size of the file name */
+    text-overflow: ellipsis; /* Add ellipsis for overflow */
+    overflow: hidden; /* Hide overflowing text */
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+.file-icon .date {
+    margin-top: 5px;
+    font-size: 12px; /* Adjust font size of the date */
+}
+
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+
+    <div class="container-fluid">
+
+      <a id="NameDisp" class="navbar-brand" href="#">User's Name</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <form class="d-flex mx-auto" role="search">
+
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
+          <button class="btn btn-outline-success" type="submit">Search</button>
+
+        </form>
+
+
+
+        <div class="dropdown dropdown-center ms-auto">
+
+          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">
+
+            <a id="userNameDisp"> Umair</a>
+
+            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+
+          </a>
+
+          <ul class="dropdown-menu text-small">
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#" id="logoutButton">Sign out</a></li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+  <div class="container-fluid">
+
+    <div class="row">
+
+      <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
+
+        <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu"
+          aria-labelledby="sidebarMenuLabel">
+
+          <div class="offcanvas-header">
+
+            <h5 class="offcanvas-title" id="sidebarMenuLabel">Company name</h5>
+
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"
+              aria-label="Close"></button>
+
+          </div>
+
+          <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
+
+            <ul class="nav flex-column">
+
+              <li class="nav-item">
+
+                <a id="uploadLink" onclick="getFile()" class="nav-link d-flex align-items-center gap-2 active"
+                  aria-current="page" href="#">
+
+                  Upload
+
+                </a>
+
+                <input type="file" id="fileInput" style="display: none;">
+
+              </li>
+
+              <li class="nav-item">
+
+                <a id="creatFolderID" class="nav-link d-flex align-items-center gap-2" href="#">
+                  Create Folder
+                </a>
+
+              </li>
+
+            </ul>
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+        <!-- Directory navigation buttons -->
+        <div class="btn-group mb-3" role="group">
+          <button id="goBackBtn" type="button" class="btn btn-primary">Back</button>
+          <button id="goForwardBtn" type="button" class="btn btn-primary">Forward</button>
+        </div>
+
+        <div class="d-flex flex-column pt-3 pb-2 mb-3 border-bottom">
+
+          <h1 class="h2">My Files</h1>
+
+          <div id="currentDirectory"></div>
+
+          <p id="storageUsage"></p>
+
+          <p id="storageBW"></p>
+
+          <h5 id="fileCount">Loading...</h5>
+
+        </div>
+
+        <div id="directoryList" class="row row-cols-2 row-cols-md-6 g-4">
+
+          <!-- File list will be dynamically generated here -->
+
+        </div>
+
+        <div id="fileList" class="row row-cols-2 row-cols-md-6 g-4">
+
+          <!-- File list will be dynamically generated here -->
+
+        </div>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <div id="loaderUser" class="loader"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="userPage.js"></script>
+
+</body>
+
+
+
+</html>

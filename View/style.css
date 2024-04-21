@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 10;
+  padding: 10;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  
+  
+}
+
+.container{
+  max-width: 500px;
+  padding: 0 30px;
+  margin: 180px auto;
+}
+.wrapper{
+  width: 100%;
+  background: #2d8bd7;
+  border-radius: 20px;
+ 
+}
+.wrapper .title{
+  height: 90px;
+  background: #FE8DF;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form{
+  padding: 30px 25px 25px 25px;
+}
+.wrapper form .row{
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.wrapper form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+form .row input:focus{
+  border-color: #16a085;
+  box-shadow: inset 0px 0px 2px 2px 
+}
+form .row input::placeholder{
+ 
+}
+.wrapper form .row i{
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #2d8bd7;
+  font-size: 18px;
+  background: #2d8bd7;
+  border: 1px solid #ADD8E6;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form .pass{
+  margin: -8px 0 20px 0;
+}
+.wrapper form .pass a{
+  color: #ADD8E6;
+  font-size: 17px;
+  text-decoration: none;
+}
+.wrapper form .pass a:hover{
+  text-decoration: underline;
+}
+.wrapper form .button input{
+  color:#2d8bd7;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: #fff;
+  border: 1px solid #2d8bd7;
+  cursor: pointer;
+}
+form .button input:hover{
+}
+.wrapper form .signup-link{
+  color : #ADD8E6;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 20px;
+}
+.wrapper form .signup-link a{
+  color: #ADD8E6;
+  text-decoration: none;
+}
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+
+.file_icon {
+  width: 50px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}

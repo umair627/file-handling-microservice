@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management System</title>
+    <link rel="stylesheet" href="styleLogin.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tablink" onclick="openTab('signup')">Sign Up</button>
+            <button class="tablink" onclick="openTab('login')">Login</button>
+        </div>
+        
+        <div id="signup" class="tabcontent">
+            <h2>Sign Up</h2>
+                <form id="signup-form">
+                    <input type="text" name="name" id="name" placeholder="Name">
+                    <input type="text" name="username" id="username" placeholder="Username">
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <input type="password" name="password" id="password" placeholder="Password">
+                    <button type="submit">Sign Up</button>
+                </form>
+        </div>
+
+        <div id="login" class="tabcontent">
+            <h2>Login</h2>
+            <input type="text" id="login-username" placeholder="Username">
+            <input type="password" id="login-password" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+        <div id="loader" class="loader"></div>
+        <p id="message"></p>
+    </div>
+    <script src="scriptLogin.js"></script>
+</body>
+</html>
